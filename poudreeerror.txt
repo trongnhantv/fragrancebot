@@ -1,0 +1,22 @@
+ERROR:root:OPPSS
+Traceback (most recent call last):
+  File "main_fragex.py", line 34, in <module>
+    main()
+  File "main_fragex.py", line 14, in main
+    sendemail("Started " + FILENAME)
+  File "/Users/Nhan/PycharmProjects/fragnet/EMAIL.py", line 10, in sendemail
+    server.login("nhaphanguscom@gmail.com", "Lochobame7jft")
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/smtplib.py", line 729, in login
+    raise last_exception
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/smtplib.py", line 720, in login
+    initial_response_ok=initial_response_ok)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/smtplib.py", line 641, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials 186sm47004519pfv.61 - gsmtp')
+ERROR:root:OPPSS
+Traceback (most recent call last):
+  File "main_fragex.py", line 34, in <module>
+    main()
+  File "main_fragex.py", line 30, in main
+    time.sleep(5*60)
+KeyboardInterrupt

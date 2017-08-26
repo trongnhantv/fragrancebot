@@ -8,6 +8,7 @@ FILENAME = (sys.argv[2])
 
 def main():
 	url = (sys.argv[1])
+	print("start")
 	original = str(getFrag(url))
 	# dumpToSave(original)
 	sendemail("Started " + FILENAME)
@@ -30,7 +31,7 @@ def main():
 		except:
 			logging.exception('OPPSS' + current_time)
 
-time.sleep(30 * 60)
+		time.sleep(15 * 60)
 
 logging.basicConfig(level=logging.DEBUG, filename=FILENAME + 'error.txt')
 main()

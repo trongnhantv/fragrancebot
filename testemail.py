@@ -6,7 +6,7 @@ def sendemail(content):
     server.ehlo()
     server.starttls()
     server.ehlo()
-    server.login("nhaphanguscom@gmail.com", "Lochobame7!!jft")
+    server.login("nhaphanguscom@gmail.com", "Lochobame77!!jft")
     #prepare the content
     body = content
     #prepare the email presentation
@@ -19,3 +19,4 @@ def sendemail(content):
     msg.attach(MIMEText(body, 'plain'))
     text = msg.as_string()
     server.sendmail(fromaddr, toaddr, text)
+sendemail("nhan")

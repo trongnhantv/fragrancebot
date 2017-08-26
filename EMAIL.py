@@ -1,4 +1,3 @@
-import fra
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -7,7 +6,7 @@ def sendemail(content):
     server.ehlo()
     server.starttls()
     server.ehlo()
-    server.login("nhaphanguscom@gmail.com", "Lochobame7!!jft")
+    server.login("nhaphanguscom@gmail.com", "Lochobame77!!jft")
     #prepare the content
     body = content
     #prepare the email presentation

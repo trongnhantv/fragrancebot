@@ -12,4 +12,4 @@ while( len(result)>0):
     result = getNAList(url + str(num))
 now  = datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y")
 path = os.path.join("NAlist",now)
-writeToFile(per_list,path)
+print(per_list,path)

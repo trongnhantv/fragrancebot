@@ -13,6 +13,13 @@ def getHTML(url):
         print(e)
         return None
     return html
+def getMaxAroma(url):
+    html = getHTML(url)
+    bs = BeautifulSoup(html.read(), "html.parser")
+    # div = bs.find("div",class_="dimensionContain")
+    # div = bs.find("div", class_="variantText")
+    txt = bs.find("div", class_="product").find("div", {"class": "name"}).getText()
+    return txt
 def getFrag(url):
     html = getHTML(url)
     bs = BeautifulSoup(html.read(), "html.parser")

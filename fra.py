@@ -13,6 +13,19 @@ def getHTML(url):
         print(e)
         return None
     return html
+def getFragNetNAList():
+    num = 1
+    finalNAList = []
+    url = "https://www.fragrancenet.com/fragrances?f=0!4V&page="
+    NAList = getNAList(url + str(num))
+
+    while (len(NAList) > 0):
+        finalNAList.extent (NAList)
+        num += 1
+        NAList = getNAList(url + str(num))
+    # now  = datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y")
+    # path = os.path.join("NAlist",now)
+    return finalNAList.sort()
 def getMaxAroma(url):
     html = getHTML(url)
     bs = BeautifulSoup(html.read(), "html.parser")

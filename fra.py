@@ -20,7 +20,7 @@ def getFragNetNAList():
     NAList = getNAList(url + str(num))
 
     while (len(NAList) > 0):
-        finalNAList.extent (NAList)
+        finalNAList.extend (NAList)
         num += 1
         NAList = getNAList(url + str(num))
     # now  = datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y")

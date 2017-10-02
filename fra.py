@@ -25,7 +25,8 @@ def getFragNetNAList():
         NAList = getNAList(url + str(num))
     # now  = datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y")
     # path = os.path.join("NAlist",now)
-    return finalNAList.sort()
+    finalNAList.sort()
+    return finalNAList
 def getMaxAroma(url):
     html = getHTML(url)
     bs = BeautifulSoup(html.read(), "html.parser")

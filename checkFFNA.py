@@ -23,8 +23,8 @@ def main():
                                 log = current_time + " same"
                         # if different then write email alert together with the content
                         else:
-                                log = current_time + "\n" + "DIFF:\n" + "\n".join(d) + "\n" + "OLD: \n" +"\n".join(original) \
-                                      + "\nNEW: \n" + "\n".join(current)
+                                log = current_time + "\n" + "DIFF:\n" + "\n".join(d) #+ "\n" + "OLD: \n" +"\n".join(original) \
+                                   #   + "\nNEW: \n" + "\n".join(current)
                                 sendemail(log)
                                 original = current
                         writeToFile(log, FILENAME)

@@ -5,9 +5,9 @@ import sys
 import logging
 import time
 FILENAME = "FragrancenetNewArrial"
-
+Subject = "Fragrancenet_NewArrival"
 def main():
-        sendemail("Started " + FILENAME)
+        sendemail("Started " + FILENAME,Subject)
         original = getFragNetNAList()
         while True:
                 # get time  to file the time
@@ -25,7 +25,7 @@ def main():
                         else:
                                 log = current_time + "\n" + "DIFF:\n" + "\n".join(d) #+ "\n" + "OLD: \n" +"\n".join(original) \
                                    #   + "\nNEW: \n" + "\n".join(current)
-                                sendemail(log)
+                                sendemail(log,Subject)
                                 original = current
                         writeToFile(log, FILENAME)
                 except:

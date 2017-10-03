@@ -5,12 +5,12 @@ import sys
 import logging
 import time
 FILENAME = "MaxaromaNA"
-
+Subject = "MaxAroma_NewArrival"
 def main():
 	url = "http://www.maxaroma.com/"
 	original = getMaxAroma(url)
 	# dumpToSave(original)
-	sendemail("Started " + FILENAME)
+	sendemail("Started " + FILENAME,Subject)
 	while True:
 		# get time  to file the time
 		current_time = strftime("%Y-%m-%d %H:%M:%S", gmtime())
@@ -24,7 +24,7 @@ def main():
 			# if different then write email alert together with the content
 			else:
 				log = current_time + "\n" +   "OLD: \n" + original + "\nNEW: \n" + current
-				sendemail(log)
+				sendemail(log,Subject)
 				original = current
 			writeToFile(log, FILENAME)
 		except:

@@ -5,13 +5,13 @@ import sys
 import logging
 import time
 FILENAME = (sys.argv[2])
-
+Subject = "Fragrancenet_Item"
 def main():
 	url = (sys.argv[1])
 	print("start")
 	original = str(getFrag(url))
 	# dumpToSave(original)
-	sendemail("Started " + FILENAME)
+	sendemail("Started " + FILENAME,Subject)
 	while True:
 		# get time  to file the time
 		current_time = strftime("%Y-%m-%d %H:%M:%S", gmtime())
@@ -25,7 +25,7 @@ def main():
 			# if different then write email alert together with the content
 			else:
 				log = current_time + "\n" + FILENAME + " OLD: \n" + original + "\nNEW: \n" + current
-				sendemail(log)
+				sendemail(log,Subject)
 				original = current
 				writeToFile(log, FILENAME)
 		except:

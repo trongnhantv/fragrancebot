@@ -10,9 +10,8 @@ import urllib
 def getNJP(url):
 	request  = urllib.request.Request(url,data=None, headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'})
 	html = urllib.request.urlopen(request)
-	html = getHTML(url)
 	bs = BeautifulSoup(html.read(), "html.parser")
-	div = bs.findAll("span", class_="VariationProductInventory").getText()
+	div = bs.find("span", class_="VariationProductInventory").getText()
 	return div
 def getHTML(url):
     try:
